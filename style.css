@@ -1,0 +1,193 @@
+:root {
+	--clr-primary-100: #30f5c7;
+	--clr-primary-200: #023242;
+	--clr-neutral-100: #fff;
+	--clr-neutral-200: #a2b6c0;
+}
+
+/* Reset */
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 100%;
+}
+
+body {
+	margin: 0;
+	font-family: Inter, Arial, Helvetica, sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: var(--clr-neutral-200);
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+p {
+	margin: 0;
+}
+
+header,
+main,
+footer {
+	position: relative;
+	max-width: 70em;
+	width: 90%;
+	margin: 0 auto;
+	z-index: 99;
+}
+
+header,
+footer {
+	padding: 2em 0;
+}
+
+main {
+	padding: 6em 0;
+}
+
+.wrapper {
+	z-index: 1;
+	height: 100vh;
+	position: relative;
+	background: var(--clr-primary-200);
+	display: grid;
+}
+
+main h1 {
+	color: var(--clr-primary-100);
+	font-family: Sen, Arial, Helvetica, sans-serif;
+	font-size: clamp(2.5rem, 10vw, 8rem);
+	line-height: 1.35;
+	margin-bottom: 0.5em;
+}
+
+main span {
+	line-height: 1;
+}
+
+main p {
+	margin-bottom: 1.25em;
+	font-size: 1.125rem;
+}
+
+main button {
+	border: none;
+	border-radius: 4px;
+	background: var(--clr-primary-100);
+	color: var(--clr-primary-200);
+	font-weight: 700;
+	font-size: 1.2rem;
+	padding: 0.75em 1em;
+}
+
+footer {
+	display: flex;
+	align-items: center;
+}
+
+footer p {
+	margin-left: 1em;
+	font-size: 1.25rem;
+}
+
+.blob {
+	position: absolute;
+	z-index: -1;
+	display: none;
+}
+
+.blob-1 {
+	display: block;
+	bottom: 2em;
+	right: 1em;
+}
+
+.blob-2 {
+	display: block;
+	top: 0;
+	right: 0;
+	width: 40%;
+	max-width: 10em;
+}
+
+.blob-3 {
+	display: block;
+	width: 7em;
+	top: 0;
+	left: 0.75em;
+}
+
+@media screen and (min-width: 45em) {
+	header,
+	footer {
+		padding: 2em 0 0;
+	}
+
+	main {
+		padding: 0.5em 0;
+	}
+
+	main h1 {
+		margin-bottom: 0.25em;
+		line-height: 1.1;
+	}
+
+	main p {
+		width: 35ch;
+	}
+
+	main span {
+		position: relative;
+		z-index: 999;
+	}
+
+	main span::after {
+		content: "";
+		position: absolute;
+		background-image: url("./Assets/User\ Avatar\ 3.svg");
+		background-repeat: no-repeat;
+		width: 8em;
+		height: 100%;
+		left: -60px;
+		bottom: -80px;
+		z-index: -1;
+	}
+
+	.blob {
+		display: block;
+	}
+
+	.blob-3 {
+		top: -1em;
+		left: -7%;
+	}
+
+	.blob-2 {
+		top: -5em;
+		right: 15%;
+	}
+
+	.blob-1 {
+		right: 15%;
+		top: 45%;
+	}
+
+	.blob-4 {
+		right: 15%;
+		bottom: -8em;
+	}
+
+	.blob-5 {
+		top: -1.5em;
+		left: 50%;
+	}
+}
